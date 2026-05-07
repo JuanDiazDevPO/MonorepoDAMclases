@@ -1,11 +1,20 @@
 import React from "react";
 import { Text, View } from "react-native";
+import { Button } from "../../atoms";
 
-const RegisterForm = () => {
+interface RegisterFormProps {
+ 
+    onSubmit: ()=> void;
+}
+const RegisterForm = (
+    {onSubmit}: RegisterFormProps
+) => {
     return(
         <View>
             <Text>
-                Formulario Register 
+                Formulario Register
+                <Button title= "Registrar"
+                onSubmit={onSubmit}></Button> 
             </Text>
 
         </View>
